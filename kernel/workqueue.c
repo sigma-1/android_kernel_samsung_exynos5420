@@ -43,9 +43,9 @@
 #include <linux/idr.h>
 #include <linux/moduleparam.h>
 
-#include <mach/sec_debug.h>
+#include "../workqueue_internal.h"
 
-#include "workqueue_sched.h"
+#include <mach/sec_debug.h>
 
 enum {
 	/* global_cwq flags */
