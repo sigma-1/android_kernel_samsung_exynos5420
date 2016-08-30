@@ -234,7 +234,7 @@ static int __cpuinit exynos_boot_secondary(unsigned int cpu, struct task_struct 
 		if (soc_is_exynos5410() || soc_is_exynos5420())
 			dsb_sev();
 		else
-			arm_send_ping_ipi(cpu);
+			gic_raise_softirq(cpumask_of(cpu), 1);
 
 		if (pen_release == -1)
 			break;

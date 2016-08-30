@@ -28,6 +28,7 @@
 #include <asm/smp_scu.h>
 #include <asm/suspend.h>
 #include <asm/unified.h>
+#include <asm/hardware/gic.h>
 #include <asm/cputype.h>
 #include <asm/cacheflush.h>
 #include <asm/system_misc.h>
@@ -99,7 +100,7 @@ static int set_enable_mask(const char *val, const struct kernel_param *kp)
 		for_each_online_cpu(i) {
 			if (i == cpuid)
 				continue;
-			arm_send_ping_ipi(i);
+			gic_raise_softirq(cpumask_of(i), 0);
 		}
 	}
 
