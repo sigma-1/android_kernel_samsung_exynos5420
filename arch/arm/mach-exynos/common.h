@@ -14,6 +14,7 @@
 
 extern struct sys_timer exynos4_timer;
 
+struct map_desc;
 void exynos_init_io(struct map_desc *mach_desc, int size);
 void exynos_register_audss_clocks(void);
 void exynos4_init_irq(void);
@@ -58,6 +59,10 @@ void exynos4212_register_clocks(void);
 #else
 #define exynos4212_register_clocks()
 #endif
+
+extern struct smp_operations exynos_smp_ops;
+
+extern void exynos_cpu_die(unsigned int cpu);
 
 extern bool is_cable_attached;
 extern bool is_wpc_cable_attached;
