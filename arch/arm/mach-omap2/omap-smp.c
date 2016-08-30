@@ -111,7 +111,7 @@ int __cpuinit boot_secondary(unsigned int cpu, struct task_struct *idle)
 		booted = true;
 	}
 
-	arm_send_ping_ipi(cpu);
+	gic_raise_softirq(cpumask_of(cpu), 1);
 
 	/*
 	 * Now the secondary core is starting up let it run its
