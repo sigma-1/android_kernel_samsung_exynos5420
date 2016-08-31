@@ -27,7 +27,6 @@
 #include <asm/mach/map.h>
 #include <asm/mach-types.h>
 #include <asm/page.h>
-#include <asm/hardware/gic.h>
 #include <asm/hardware/cache-l2x0.h>
 
 #include <mach/zynq_soc.h>
