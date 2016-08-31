@@ -229,7 +229,7 @@ static int bL_switch_to(unsigned int new_cluster_id)
 	 * Raise a SGI on the inbound CPU to make sure it doesn't stall
 	 * in a possible WFI, such as the one in bL_do_switch().
 	 */
-	gic_raise_softirq(cpumask_of(smp_processor_id()), 0);
+	arch_send_wakeup_ipi_mask(cpumask_of(0));
 
 	spin_unlock(&switch_gic_lock);
 

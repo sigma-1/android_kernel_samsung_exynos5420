@@ -234,7 +234,7 @@ static int __cpuinit exynos_boot_secondary(unsigned int cpu, struct task_struct 
 		if (soc_is_exynos5410() || soc_is_exynos5420())
 			dsb_sev();
 		else
-			gic_raise_softirq(cpumask_of(cpu), 1);
+			arch_send_wakeup_ipi_mask(cpumask_of(cpu));
 
 		if (pen_release == -1)
 			break;
@@ -278,8 +278,6 @@ static void __init exynos_smp_init_cpus(void)
 
 	for (i = 0; i < ncores; i++)
 		set_cpu_possible(i, true);
-
-	set_smp_cross_call(gic_raise_softirq);
 }
 
 static void __init exynos_smp_prepare_cpus(unsigned int max_cpus)
