@@ -23,7 +23,6 @@
 #include <mach/hardware.h>
 #include <mach/ts72xx.h>
 
-#include <asm/hardware/vic.h>
 #include <asm/mach-types.h>
 #include <asm/mach/map.h>
 #include <asm/mach/arch.h>
