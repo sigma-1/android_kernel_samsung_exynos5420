@@ -100,7 +100,7 @@ static int set_enable_mask(const char *val, const struct kernel_param *kp)
 		for_each_online_cpu(i) {
 			if (i == cpuid)
 				continue;
-			gic_raise_softirq(cpumask_of(i), 0);
+			arch_send_wakeup_ipi_mask(cpumask_of(i));
 		}
 	}
 
