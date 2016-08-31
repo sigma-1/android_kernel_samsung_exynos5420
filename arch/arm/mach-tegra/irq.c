@@ -23,7 +23,7 @@
 #include <linux/io.h>
 #include <linux/of.h>
 
-#include <asm/hardware/gic.h>
+#include <linux/irqchip/arm-gic.h>
 
 #include <mach/iomap.h>
 
