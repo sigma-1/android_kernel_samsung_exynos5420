@@ -28,7 +28,6 @@
 #include <linux/mmc/host.h>
 #include <linux/interrupt.h>
 
-#include <asm/hardware/vic.h>
 #include <asm/mach/arch.h>
 #include <asm/mach/map.h>
 #include <asm/setup.h>

@@ -20,7 +20,6 @@
 #include <linux/delay.h>
 #include <linux/pwm_backlight.h>
 
-#include <asm/hardware/vic.h>
 #include <asm/mach/arch.h>
 #include <asm/mach/map.h>
 #include <asm/setup.h>
