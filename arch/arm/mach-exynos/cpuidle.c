@@ -20,6 +20,7 @@
 #include <linux/gpio.h>
 #include <linux/suspend.h>
 #include <linux/clk.h>
+#include <linux/irqchip/arm-gic.h>
 #ifdef CONFIG_SEC_PM
 #include <linux/moduleparam.h>
 #endif
@@ -28,7 +29,6 @@
 #include <asm/smp_scu.h>
 #include <asm/suspend.h>
 #include <asm/unified.h>
-#include <asm/hardware/gic.h>
 #include <asm/cputype.h>
 #include <asm/cacheflush.h>
 #include <asm/system_misc.h>
