@@ -328,7 +328,6 @@ MACHINE_START(REAL6410, "REAL6410")
 	.atag_offset	= 0x100,
 
 	.init_irq	= s3c6410_init_irq,
-	.handle_irq	= vic_handle_irq,
 	.map_io		= real6410_map_io,
 	.init_machine	= real6410_machine_init,
 	.timer		= &s3c24xx_timer,

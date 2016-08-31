@@ -165,7 +165,6 @@ MACHINE_START(SMARTQ7, "SmartQ 7")
 	/* Maintainer: Maurus Cuelenaere <mcuelenaere AT gmail DOT com> */
 	.atag_offset	= 0x100,
 	.init_irq	= s3c6410_init_irq,
-	.handle_irq	= vic_handle_irq,
 	.map_io		= smartq_map_io,
 	.init_machine	= smartq7_machine_init,
 	.timer		= &s3c24xx_timer,

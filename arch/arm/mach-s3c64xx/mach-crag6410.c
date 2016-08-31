@@ -808,7 +808,6 @@ MACHINE_START(WLF_CRAGG_6410, "Wolfson Cragganmore 6410")
 	/* Maintainer: Mark Brown <broonie@opensource.wolfsonmicro.com> */
 	.atag_offset	= 0x100,
 	.init_irq	= s3c6410_init_irq,
-	.handle_irq	= vic_handle_irq,
 	.map_io		= crag6410_map_io,
 	.init_machine	= crag6410_machine_init,
 	.timer		= &s3c24xx_timer,
