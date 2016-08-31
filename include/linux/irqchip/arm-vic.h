@@ -1,5 +1,5 @@
 /*
- *  arch/arm/include/asm/hardware/vic.h
+ *  include/linux/arm-vic.h
  *
  *  Copyright (c) ARM Limited 2003.  All rights reserved.
  *
@@ -32,6 +32,5 @@ struct pt_regs;
 void __vic_init(void __iomem *base, unsigned int irq_start, u32 vic_sources,
 		u32 resume_sources, struct device_node *node);
 void vic_init(void __iomem *base, unsigned int irq_start, u32 vic_sources, u32 resume_sources);
-int vic_of_init(struct device_node *node, struct device_node *parent);
 
 #endif

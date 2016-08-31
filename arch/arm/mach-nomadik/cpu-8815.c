@@ -22,12 +22,12 @@
 #include <linux/amba/bus.h>
 #include <linux/platform_device.h>
 #include <linux/io.h>
+#include <linux/irqchip/arm-vic.h>
 
 #include <plat/gpio-nomadik.h>
 #include <mach/hardware.h>
 #include <mach/irqs.h>
 #include <asm/mach/map.h>
-#include <asm/hardware/vic.h>
 
 #include <asm/cacheflush.h>
 #include <asm/hardware/cache-l2x0.h>

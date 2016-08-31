@@ -17,8 +17,6 @@
 #include <linux/device.h>
 #include <linux/gpio.h>
 
-#include <asm/hardware/vic.h>
-
 #include <plat/regs-irqtype.h>
 
 #include <mach/map.h>
