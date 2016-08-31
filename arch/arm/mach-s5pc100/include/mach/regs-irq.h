@@ -14,6 +14,6 @@
 #define __ASM_ARCH_REGS_IRQ_H __FILE__
 
 #include <mach/map.h>
-#include <asm/hardware/vic.h>
+#include <linux/irqchip/arm-vic.h>
 
 #endif /* __ASM_ARCH_REGS_IRQ_H */

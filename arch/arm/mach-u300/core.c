@@ -30,11 +30,11 @@
 #include <linux/pinctrl/consumer.h>
 #include <linux/pinctrl/pinconf-generic.h>
 #include <linux/dma-mapping.h>
+#include <linux/irqchip/arm-vic.h>
 
 #include <asm/types.h>
 #include <asm/setup.h>
 #include <asm/memory.h>
-#include <asm/hardware/vic.h>
 #include <asm/mach/map.h>
 #include <asm/mach/irq.h>
 
